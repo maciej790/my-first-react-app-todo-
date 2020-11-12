@@ -12,7 +12,7 @@ function App() {
 
   //logic display component when tasks are typed, else not display
   useEffect(() => {
-    if (todoLenght > 0) {
+    if (tasks.length > 0) {
       setDisplay(true);
     } else {
       setDisplay(false);
