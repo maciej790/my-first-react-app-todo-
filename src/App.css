@@ -33,7 +33,7 @@ body{
   height: auto;
   margin-top: 50px;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
 }
 
@@ -63,17 +63,9 @@ input{
   margin-top: 100px;
 }
 
-.xyz{
-  width: 70%;
-  height: 50px;
-  background-color: white;
-  opacity: 0.7;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 30px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  text-decoration: line-through;
+.btn{
+  border: none;
+  outline: none;
+  height: 40px;
+  padding: 10px;
 }
-

@@ -1,9 +1,8 @@
-
-function TodoItem({ id, title, handleClickTodo }) {
+function TodoItem({ id, title, handleClickRemoveTask }) {
   return (
     <div className="todoItem">
       <h2>{title}</h2>
-      <button onClick={() => handleClickTodo(id)}>Remove</button>
+      <button onClick={() => handleClickRemoveTask(id)}>Remove</button>
     </div>
   );
 }
