@@ -29,7 +29,7 @@ function App() {
       id: Math.random() + 1,
       title: inputValue,
     };
-    if (inputValue != "") {
+    if (inputValue !== "") {
       setTasks((tasks) => [...tasks, newItem]);
     } else {
       alert("First You must type a value!");
