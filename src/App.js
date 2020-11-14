@@ -2,11 +2,21 @@ import "./App.css";
 import Header from "./components/Header";
 import Form from "./components/Form";
 import TodoItem from "./components/TodoItem";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function App() {
   const [inputValue, setInputValue] = useState("");
   const [tasks, setTasks] = useState([]);
+
+  useEffect(() => {
+    if (JSON.parse(localStorage.getItem("el"))) {
+      setTasks(JSON.parse(localStorage.getItem("el")));
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("el", JSON.stringify(tasks));
+  }, [tasks]);
 
   //change state inputValue
   const handleChangeInput = (e) => {
@@ -19,13 +29,11 @@ function App() {
       id: Math.random() + 1,
       title: inputValue,
     };
-
-    if (inputValue !== "") {
+    if (inputValue != "") {
       setTasks((tasks) => [...tasks, newItem]);
     } else {
-      alert("First You must type a task!");
+      alert("First You must type a value!");
     }
-
     setInputValue("");
   };
 
